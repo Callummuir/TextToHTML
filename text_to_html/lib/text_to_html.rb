@@ -1,9 +1,9 @@
-def read_file(stringFileLoc)
+def read_file()
 	puts "Please input fileName to input"
 	puts Dir.entries("../bin/input/")
 	inputName = gets.chomp
 	# TODO add error checking
-	return open(stringFileLoc, "rb")
+	return open("../bin/input/" + inputName, "rb")
 end
 
 def output_string_to_file(outputString)
@@ -62,7 +62,7 @@ def add_html_to_string(arrayOfPara)
 	return outString
 end
 
-fileIn = read_file(fileLoc)
+fileIn = read_file()
 stringContent = file_to_string(fileIn)
 paragraphs = split_string_by_para(stringContent)
 outString = add_html_to_string(paragraphs)
