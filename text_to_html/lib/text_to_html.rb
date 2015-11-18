@@ -1,38 +1,50 @@
-
-
-# Reads in a file with given location
-def read_file(fileToRead)
-	return open(fileToRead, "rb")
+def read_file(stringFileLoc)
+	return open(stringFileLoc, "rb")
 end
 
-# ouputs a string into the correct output file
-def output_file(fileToOutput)
+def output_string_to_file(outputString)
+	# TODO change from default?
+	# TODO add error checking, false if fail, true if not
+	# TODO add in checking for if the file is already in use. Then create new file W/date, or title from user?
 	outputLoc = "outExample.txt"
-	outputFile = File.new("outputLoc", "w")
-	outputFile.puts(fileToOutput)
+	outputFile = File.new(outputLoc, "w")
+	outputFile.puts(outputString)
 end
 
-# Convert file to a string
 def file_to_string(file)
-	fileContent = file.read	
+	return fileContent = file.read	
 end
+
+def split_string_by_para(stringIn)
+	paraArray = stringIn.split("\n")
+	puts paraArray[0]
+	return paraArray
+end
+
+
+
+
+
+
+
 
 # TODO add user input for text file
-filename = "example.txt"
+fileLoc = "example.txt"
+fileIn = read_file(fileLoc)
+stringContent = file_to_string(fileIn)
+split_string_by_para(stringContent)
+# TODO here for more functions!
 
-# read in the file
-read_file(filename)
-
-# parse the file
-
-
-# Add in html tags
+# TODO parse the file
 
 
-# convert to string
+# TODO Add in html tags
 
 
-# output
+
+output_string_to_file(stringContent)
+
+
 
 
 
