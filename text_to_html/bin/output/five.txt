@@ -1,0 +1,29 @@
+<div class="post col-xs-12">
+  <div class="col-md-3 col-xs-1">
+  </div>
+
+  <div class="col-md-6 col-xs-10">
+    <h2>Title1</h2>
+
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus, lacus vitae eleifend vulputate, sem mi semper diam, eu porttitor tortor dui ac neque. In ex sapien, aliquam sed efficitur nec, molestie eget turpis. Fusce bibendum nec nulla non ullamcorper. Sed sed mauris neque. Etiam vitae rhoncus odio. Nulla semper leo eget lectus ornare sodales. Nullam nisl eros, rhoncus quis mauris at, tempor molestie sapien. In elit libero, pellentesque sit amet efficitur eu, tincidunt quis mauris. Vestibulum libero velit, rhoncus vitae aliquam ac, eleifend eu nulla.
+  </p> 
+  <br />
+
+  <p>
+    Pellentesque tristique, justo sed viverra faucibus, quam diam malesuada lacus, varius bibendum purus nibh venenatis magna. Integer blandit urna in scelerisque rhoncus. Nunc ornare vel magna sit amet viverra. Vivamus sit amet porta augue, in semper leo. Aenean semper euismod dolor vitae congue. Mauris facilisis nulla rhoncus lectus fringilla, a iaculis lacus ultricies. Praesent cursus elit lectus. Nam in eros ac justo aliquet porttitor ut eu ante. Proin tristique leo id molestie sagittis. Vestibulum gravida ac ligula tempus porttitor. Nunc blandit, felis in aliquet malesuada, lorem lacus ultricies neque, at volutpat lacus purus vitae odio.
+  </p> 
+  <br />
+
+  <p>
+    Nam sed scelerisque ipsum. Nulla facilisi. Sed sed pellentesque odio. Vivamus id faucibus nibh. Etiam ornare ipsum a pulvinar finibus. Vestibulum hendrerit id neque sed euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec interdum id arcu ornare luctus. Curabitur sit amet odio vitae ipsum sollicitudin fermentum. Mauris suscipit neque ut metus ullamcorper, nec maximus nunc mattis. Pellentesque consectetur ipsum a velit elementum, nec ullamcorper nisi convallis.
+  </p> 
+  <br />
+
+  </div> 
+    <div class="col-md-3 col-xs-1">
+    </div>
+    <div class="seperator col-xs-12">
+      <p>------------------------------x------------------------------</p>
+    </div>
+</div>

@@ -26,38 +26,40 @@ end
 def add_html_to_string(arrayOfPara)
 	# Add start of the HTML
 	outString = 
-		"<div class=\"post col-xs-12\">
-		  <div class=\"col-md-3 col-xs-1\">
-		  </div>
+"<div class=\"post col-xs-12\">
+  <div class=\"col-md-3 col-xs-1\">
+  </div>
 
-		  <div class=\"col-md-6 col-xs-10\">
-		  	<h2>" + arrayOfPara[0] + "</h2>
+  <div class=\"col-md-6 col-xs-10\">
+    <h2>" + arrayOfPara[0] + "</h2>
 
-		  	"
+"
 	# Add each paragraph
 	(1..(arrayOfPara.length - 1)).each do |i|
 		if(arrayOfPara[i].length < 1)
 			
 		else 
 			outString = outString + 
-			  "<p>" + arrayOfPara[i] + "
-			  </p> 
-			  <br />
+  "  <p>
+    " + arrayOfPara[i] + 
+  "
+  </p> 
+  <br />
 
-			  "
+"
 		end
 	end
 
 	# Add end of the HTML 
 	outString = outString + 
-    "</div> 
-     <div class=\"col-md-3 col-xs-1\">
-     </div>
-     <div class=\"seperator col-xs-12\">
-     <p>------------------------------x------------------------------</p>
-     </div>
-    </div>
-		"
+"  </div> 
+  <div class=\"col-md-3 col-xs-1\">
+  </div>
+  <div class=\"seperator col-xs-12\">
+    <p>------------------------------x------------------------------</p>
+  </div>
+</div>
+"
 
 	return outString
 end
