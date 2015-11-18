@@ -1,14 +1,15 @@
 def read_file(stringFileLoc)
+	puts "Please input fileName to input"
+	puts Dir.entries("../bin/input/")
+	inputName = gets.chomp
+	# TODO add error checking
 	return open(stringFileLoc, "rb")
 end
 
 def output_string_to_file(outputString)
-	outputLoc = "../bin/output/outExample.txt"
-
-	# TODO change from default?
-	# TODO add error checking, false if fail, true if not
-	# TODO add in checking for if the file is already in use. Then create new file W/date, or title from user?
-	
+	puts "Please input name for outputfile"
+	outputName = gets.chomp
+	outputLoc = "../bin/output/" + outputName + ".txt"
 	outputFile = File.new(outputLoc, "w")
 	outputFile.puts(outputString)
 end
@@ -22,8 +23,6 @@ def split_string_by_para(stringIn)
 	return paraArray
 end
 
-# first para = title <h2>
-# all subsequent paragraps are paragraphs
 def add_html_to_string(arrayOfPara)
 	# Add start of the HTML
 	outString = 
@@ -32,7 +31,9 @@ def add_html_to_string(arrayOfPara)
 		  </div>
 
 		  <div class=\"col-md-6 col-xs-10\">
-		  	<h2>" + arrayOfPara[0] + "</h2>"
+		  	<h2>" + arrayOfPara[0] + "</h2>
+
+		  	"
 	# Add each paragraph
 	(1..(arrayOfPara.length - 1)).each do |i|
 		if(arrayOfPara[i].length < 1)
@@ -46,8 +47,6 @@ def add_html_to_string(arrayOfPara)
 			  "
 		end
 	end
-
-
 
 	# Add end of the HTML 
 	outString = outString + 
@@ -63,12 +62,6 @@ def add_html_to_string(arrayOfPara)
 	return outString
 end
 
-
-
-
-
-# TODO add user input for text file
-fileLoc = "example.txt"
 fileIn = read_file(fileLoc)
 stringContent = file_to_string(fileIn)
 paragraphs = split_string_by_para(stringContent)
