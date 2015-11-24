@@ -1,47 +1,47 @@
 def read_file()
 	puts "Please input fileName to input"
 	puts Dir.entries("../bin/input/")
-	inputName = gets.chomp
+	input_name = gets.chomp
 	# TODO add error checking
-	return open("../bin/input/" + inputName, "rb")
+	return open("../bin/input/" + input_name, "rb")
 end
 
-def output_string_to_file(outputString)
+def output_string_to_file(output_string)
 	puts "Please input name for outputfile"
-	outputName = gets.chomp
-	outputLoc = "../bin/output/" + outputName + ".txt"
-	outputFile = File.new(outputLoc, "w")
-	outputFile.puts(outputString)
+	output_name = gets.chomp
+	output_loc = "../bin/output/" + output_name + ".txt"
+	output_file = File.new(output_loc, "w")
+	output_file.puts(output_string)
 end
 
 def file_to_string(file)
-	return fileContent = file.read	
+	return file_content = file.read	
 end
 
 def split_string_by_para(stringIn)
-	paraArray = stringIn.split("\n")
-	return paraArray
+	para_array = string_in.split("\n")
+	return para_array
 end
 
 def add_html_to_string(arrayOfPara)
 	# Add start of the HTML
-	outString = 
+	out_string = 
 "<div class=\"post col-xs-12\">
   <div class=\"col-md-3 col-xs-1\">
   </div>
 
   <div class=\"col-md-6 col-xs-10\">
-    <h2>" + arrayOfPara[0] + "</h2>
+    <h2>" + array_of_para[0] + "</h2>
 
 "
 	# Add each paragraph
-	(1..(arrayOfPara.length - 1)).each do |i|
-		if(arrayOfPara[i].length < 1)
+	(1..(array_of_para.length - 1)).each do |i|
+		if(array_of_para[i].length < 1)
 			
 		else 
-			outString = outString + 
+			out_string = out_string + 
   "  <p>
-    " + arrayOfPara[i] + 
+    " + array_of_para[i] + 
   "
   </p> 
   <br />
@@ -51,7 +51,7 @@ def add_html_to_string(arrayOfPara)
 	end
 
 	# Add end of the HTML 
-	outString = outString + 
+	out_string = out_string + 
 "  </div> 
   <div class=\"col-md-3 col-xs-1\">
   </div>
@@ -61,14 +61,14 @@ def add_html_to_string(arrayOfPara)
 </div>
 "
 
-	return outString
+	return out_string
 end
 
-fileIn = read_file()
-stringContent = file_to_string(fileIn)
-paragraphs = split_string_by_para(stringContent)
-outString = add_html_to_string(paragraphs)
-output_string_to_file(outString)
+file_in = read_file()
+string_content = file_to_string(file_in)
+paragraphs = split_string_by_para(string_content)
+out_string = add_html_to_string(paragraphs)
+output_string_to_file(out_string)
 
 
 
