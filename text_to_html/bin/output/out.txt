@@ -1,0 +1,171 @@
+<div class="post col-xs-12">
+  <div class="col-md-3 col-xs-1">
+  </div>
+
+  <div class="col-md-6 col-xs-10">
+    <h2>Interval Timer</h2>
+
+  <p>
+				  I wanted a interval timer to use when exercising, one that I could set with a time, a rest interval and a number of rounds. I couldn't find one that I liked, so I hacked one togther. 
+				</p> 
+				  <p>
+				  It is made in angular using <Yeoman's *http://yeoman.io/* ="link"> <angular generator *https://github.com/yeoman/generator-angular* ="link"> for scaffolding. 
+				</p> 
+				  <p>
+				  <Project Creation ="h">
+				</p> 
+				  <p>
+				  First job is to make sure you have <npm (Node Package Manager) *https://www.npmjs.com/* ="link"> installed. From this you can then install everything else we will need. The rest, in no particular order are: grunt, grunt-cli (command line), bower, yo, generator-karma (for testing) generator-angular. For installin the generators you can also do this through Yeoman's command line interface. 
+				</p> 
+				  <p>
+				  < 
+				</p> 
+				  <p>
+				    npm install grunt 
+				</p> 
+				  <p>
+				    npm install grunt-cli
+				</p> 
+				  <p>
+				    npm install bower 
+				</p> 
+				  <p>
+				    npm install yo 
+				</p> 
+				  <p>
+				    npm install generator-karma
+				</p> 
+				  <p>
+				    npm install generator-angular
+				</p> 
+				  <p>
+				  ="codeSnippet">
+				</p> 
+				  <p>
+				  < 1 *1.png* ="img">
+				</p> 
+				  <p>
+				  <HTML & CSS ="h">
+				</p> 
+				  <p>
+				  Now we can add in the HTML and CSS to make the site look presentable.
+				</p> 
+				  <p>
+				  We have two main sections in the HTML, the input/display and the control buttons. 
+				</p> 
+				  <p>
+				  The input/display code, below, has a section for both the input and display. Later we will tie the input/output values, and control for displaying each part to javascript variables.
+				</p> 
+				  <p>
+				  Finally I added a short title and image. I got this image off of a free image hosting site.
+				</p> 
+				  <p>
+				  < 
+				</p> 
+				  <p>
+				  <div class="titleBlock">
+				</p> 
+				  <p>
+				    <img src="images/intervalTimerLogo.png"/>
+				</p> 
+				  <p>
+				    <h1> Interval Timer </h1>
+				</p> 
+				  <p>
+				  </div>
+				</p> 
+				  <p>
+				  <div class="numbers">
+				</p> 
+				  <p>
+				    <div class="input-group">
+				</p> 
+				  <p>
+				      
+				</p> 
+				  <p>
+				      <span class="input-group-addon">Time</span>
+				</p> 
+				  <p>
+				      <input type="number" step="1" min="0"  class="form-control">
+				</p> 
+				  <p>
+				      
+				</p> 
+				  <p>
+				      <span class="input-group-addon">Interval</span>
+				</p> 
+				  <p>
+				      <input type="number" step="1" min="0"  class="form-control">
+				</p> 
+				  <p>
+				      
+				</p> 
+				  <p>
+				      <span class="input-group-addon">Rounds</span>
+				</p> 
+				  <p>
+				      <input type="number" step="1"  min="0"  class="form-control">
+				</p> 
+				  <p>
+				    </div>
+				</p> 
+				  <p>
+				    <div class="display" >
+				</p> 
+				  <p>
+				      <h4>
+				</p> 
+				  <p>
+				        Time: 
+				</p> 
+				  <p>
+				        Interval: 
+				</p> 
+				  <p>
+				        Rounds: 
+				</p> 
+				  <p>
+				      </h4>
+				</p> 
+				  <p>
+				    </div>
+				</p> 
+				  <p>
+				  </div>
+				</p> 
+				  <p>
+				  <div class="control">
+				</p> 
+				  <p>
+				    <button class="btn btn-default btn-lg" type="submit" >Start</button>
+				</p> 
+				  <p>
+				    <button class="btn btn-default btn-lg" type="submit" >Pause</button>
+				</p> 
+				  <p>
+				    <button class="btn btn-default btn-lg" type="submit" >Restart</button>
+				</p> 
+				  <p>
+				    <button class="btn btn-default btn-lg" type="submit" >Stop</button>
+				</p> 
+				  <p>
+				    <button class="btn btn-default btn-lg" type="submit" >Reset</button>
+				</p> 
+				  <p>
+				  </div> 
+				</p> 
+				  <p>
+				  ="snippet">
+				</p> 
+				  <p>
+				  Callum
+				</p> 
+				  </div> 
+		  <div class="col-md-3 col-xs-1">
+		  </div>
+		  <div class="seperator col-xs-12">
+		    <p>------------------------------x------------------------------</p>
+		  </div>
+		</div>
+		
