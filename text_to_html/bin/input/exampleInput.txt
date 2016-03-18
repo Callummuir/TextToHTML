@@ -70,7 +70,7 @@ Finally I added a short title and image. I got this image off of a free image ho
   <button class="btn btn-default btn-lg" type="submit" >Reset</button>
 </div> 
 
-="snippet">
+="HTMLSnippet">
 
 
 

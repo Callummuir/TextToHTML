@@ -20,29 +20,95 @@ def add_tags(string_in)
 		
 		# if we have found the start of a tag
 		if string_in[i] == "<"
-			tag_start_index = i
 			j = i
 
 			# find end of tag
 			until string_in[j-1] + string_in[j] == "\">" do
 				j += 1
-
 			end
 			
-			tag_end_index = j
-			puts string_in[i..j]
-			puts " ----------------- "
+			# get new tag
+			new_tag = get_replace_tag(string_in[i..j])
+			# replace old tag with new tag
+			# string_in[i..j] = new_tag
 
 			i = j+1
 		end
 		i += 1
 	end 
-	
-
-	
 
 	output = string_in
 	output
+end
+
+# get a replacement for markup tag
+def get_replace_tag(tag_in)
+	# find tag type
+	label = find_tag_type(tag_in)
+	replacement_tag = get_tag_from_label(label, tag_in)
+	puts replacement_tag
+	puts " ----------------- "
+end
+
+# find the type of tag
+def find_tag_type(tag_in)
+	i = 0
+	while i < tag_in.length
+		if tag_in[i-1] + tag_in[i] == "=\""
+			start_label = i + 1
+			end_label = tag_in.length - 3 
+		end
+		i += 1
+	end
+	tag_in[start_label .. end_label]
+end
+
+# returns the finished
+def get_tag_from_label(label, tag)
+	case 
+	when label == "h"
+		new_tag = get_header_tag(tag)
+	when label == "link"
+		new_tag = get_link_tag(tag)
+	when label == "HTMLSnippet"
+		new_tag = get_HTML_tag(tag)
+	when label == "codeSnippet"
+		new_tag = get_code_tag(tag)
+	when label == "img"	
+		new_tag = get_image_tag(tag)
+	end
+	new_tag
+end
+
+# returns the tag for a header label
+def get_header_tag(tag)
+	out = "<h2>" + tag[1 .. tag.index("=\"") - 1] + "</h2>"
+	out
+end
+
+# returns the tag for a link label
+def get_link_tag(tag)
+	link = tag[tag.index("*") + 1..tag.length]
+	out = "<a href=\"" +  link[1.. link.index("*") - 1] + ">" + tag[1..tag.index("*") -1] + "</a>"
+	out
+
+end
+
+# returns the tag for a HTML label
+def get_HTML_tag(tag)
+	puts "html tag"
+	puts tag
+	# out = "<xmp class=\"prettprint\">" + + "</xmp>""
+end
+
+# returns the tag for a code label
+def get_code_tag(tag)
+
+end
+
+# returns the tag for a header label
+def get_image_tag(tag)
+
 end
 
 # split the string into paragraphs. 
