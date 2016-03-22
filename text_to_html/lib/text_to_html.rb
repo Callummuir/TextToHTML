@@ -13,6 +13,7 @@ def file_to_string(file)
 end
 
 # add tags to the file.
+# TODO this is failing on HTML going in
 def add_tags(string_in)
 	i = 0;
 	# search string for tag
@@ -98,6 +99,7 @@ end
 def get_HTML_tag(tag)
 	puts "html tag"
 	puts tag
+	# TODO not getting the correct HTML in to the function
 	# out = "<xmp class=\"prettprint\">" + + "</xmp>""
 end
 
